@@ -16,5 +16,6 @@ def home():
 def get_volume():
     # avgDeci = get_amplitdue(file)
     # return avgDeci
-    data = request.get_json()
+    data = request.make_form_data_parser()
+    data = data.parse(request.files.get('audio_file'))
     return(data)
