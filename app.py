@@ -14,9 +14,8 @@ def home():
 
 @app.route("/getvolume", methods=['POST'])
 def get_volume():
-    print("you reached me")
-    # file = request.files['audio_file']
+    file = request.files['audio_file']
     # avgDeci = get_amplitdue(file)
     # return avgDeci
     data = request.get_data()
-    return(data)
+    return(file)
