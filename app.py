@@ -14,8 +14,9 @@ def home():
 
 @app.route("/getvolume", methods=['POST'])
 def get_volume():
-    # avgDeci = get_amplitdue(file)
-    # return avgDeci
-    data = request.make_form_data_parser()
-    data = data.parse(request.files.get('audio_file'))
-    return(data)
+    file = request.files['audio_file']
+    avgDeci = get_amplitdue(file)
+    return avgDeci
+    # data = request.make_form_data_parser()
+    # data = data.parse(request.files.get('audio_file'))
+    # return(data)
