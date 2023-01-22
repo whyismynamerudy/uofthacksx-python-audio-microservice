@@ -13,4 +13,4 @@ def get_amplitdue(file):
         average_amplitude = np.mean(np.abs(audio))
         # convert to dB
         average_amplitude_dB = 20 * np.log10(average_amplitude)
-        print(average_amplitude_dB)
+        return average_amplitude_dB
