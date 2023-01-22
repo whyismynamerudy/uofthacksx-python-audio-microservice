@@ -17,4 +17,4 @@ def get_volume():
     # avgDeci = get_amplitdue(file)
     # return avgDeci
     data = request.get_data()
-    return(data)
+    return(data, request)
