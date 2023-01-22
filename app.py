@@ -16,5 +16,5 @@ def home():
 def get_volume():
     # avgDeci = get_amplitdue(file)
     # return avgDeci
-    data = request.get_data()
+    data = request.get_json()
     return(data)
